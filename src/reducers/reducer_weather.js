@@ -4,8 +4,10 @@ import { FETCH_WEATHER } from '../actions/index'
 // Reducers are just functions
 // First argument is the state that this reducer is responsible for
 // Second argument is our action
-export default function (state = null, action) {
-  console.log('reducer action received', action)
+// This reducer keeps an 'array' of weather data in the redux store
+export default function (state = [], action) {
+  // debugger
+  console.log('reducer action received', FETCH_WEATHER, action)
 
   switch (action.type) {
   case FETCH_WEATHER:
